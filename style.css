@@ -1,0 +1,215 @@
+/* Genel ayarlar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+/* Sol ve sağ menüler */
+.left-menu,
+.right-menu {
+    display: flex;
+    align-items: center;
+}
+
+li {
+    margin-right: 15px;
+    font-size: 15px;
+}
+
+li:last-child {
+    margin-right: 0;
+}
+
+li a {
+    text-decoration: none;
+    color: rgb(79, 78, 78);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+/* Menü ikonu */
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    /* cursor: Mouse simgesi */
+}
+
+.icon-btn img {
+    width: 15px;
+    height: 15px;
+}
+
+#sign-button {
+    background-color: rgb(65, 133, 217);
+    color: white;
+    border: none;
+    width: 60px;
+    height: 20px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#google-logo {
+    display: block;
+    margin: 100px auto 0 auto;
+    width: 272px;
+    height: 92px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    /* yatay ortalama */
+    margin-top: 20px;
+    /* logo ile arası */
+}
+
+/* Arama kutusu kapsayıcısı */
+.search-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 720px;
+    /* istersen daralt/uzat */
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.12);
+    border-radius: 24px;
+    background: white;
+    padding: 8px 12px;
+    /* kapsayıcı iç boşluğu */
+    display: flex;
+    align-items: center;
+}
+
+/* Sol arama ikonu: input'ın içine yerleşmiş görünür */
+.search-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px;
+    margin-right: 8px;
+    width: 28px;
+    height: 28px;
+    flex: 0 0 28px;
+    opacity: 0.7;
+}
+
+/* Gerçek input */
+.search-input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex: 1 1 auto;
+    width: 480px;
+    /* flex içinde taşmaya karşı */
+    padding: 8px 6px;
+}
+
+/* Sağdaki küçük ikonlar grubu */
+.right-icons {
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+    margin-left: 8px;
+    flex: 0 0 auto;
+}
+
+/* Her bir sağ ikon butonu */
+.icon-button {
+    background: transparent;
+    border: none;
+    padding: 6px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    line-height: 0;
+}
+
+.icon-button:focus {
+    outline: 2px solid #cfd8ff;
+    /* Anahat, öğeyi "öne çıkarmak" için sınırların DIŞINDA, öğelerin etrafına çizilen bir çizgidir. */
+    outline-offset: 2px;
+    /* Öğenin dış çizgisi ile kenarı/kenarlığı arasında boşluk ekler. */
+}
+
+.icon-button:hover {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+
+/* @media - Ekran boyutuna göre CSS değiştirir (responsive tasarım için) */
+/* Küçük responsive ayar: dar ekranda ikonları küçült */
+@media (max-width: 420px) {
+    .search-wrapper {
+        max-width: 100%;
+        padding: 6px 8px;
+    }
+
+    .search-input {
+        font-size: 14px;
+    }
+}
+
+.googleSearch-button,
+.lucky-button {
+    margin: 11px 4px;
+    padding: 0px 16px;
+    height: 36px;
+    min-width: 54px;
+    background-color: #f2f2f2;
+    border: 1px solid transparent;
+    /* ✔ görünmez kenarlık */
+    color: #5F6368;
+    border-radius: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    /* ✔ hafif gölge */
+}
+
+.googleSearch-button:hover,
+.lucky-button:hover {
+    border: 1px solid #dadce0;
+    /* ✔ Google tarzı kenarlık */
+    background-color: #f8f8f8;
+    /* çok hafif değişim - istersen silebilirsin */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    /* hover’da gölge biraz artar */
+}
+
+#footer {
+    width: 100%;
+    height: 40px;
+    border-top: 1px solid #e4e4e4;
+    margin-top: 180px;
+    padding: 10px 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.footer-link {
+    float: left;
+    font-size: 14px;
+    margin: 0 15px;
+    text-decoration: none;
+    color: rgb(79, 78, 78);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
